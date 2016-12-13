@@ -9,9 +9,9 @@ namespace Logic
     class Menu
     {
         #region Columns
+        public int Id { get; set; }
         public string NameOfDish { get; set; }
-        public string Type { get; set; }
-        public string Classification { get; set; }
+        public MenuChapter MenuChapter { get; set; }
         public string Price { get; set; }
         public string Availability { get; set; }
         #endregion
