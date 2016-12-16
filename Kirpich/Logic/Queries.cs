@@ -8,14 +8,20 @@ namespace Logic
 {
     public class Queries
     {
-        public IEnumerable<Menu> ReqForASpecifiedCategory(string category)
+        public IEnumerable<Show_Menu_Category> ReqForASpecifiedCategory(string category)
         {
             using (var c = new Context())
             {
                 var result = (from s in c.MainMenu.Include("MenuChapter")
                               where s.MenuChapter.Category == category && s.Availability == "Da"
+                              orderby s.Price descending
 
-                              select s).ToList();
+                              select new Show_Menu_Category
+                              {
+                                  Dish=s.NameOfDish,
+                                  Price=s.Price
+                              }
+                              ).ToList();
                 return result;
 
             }
@@ -27,24 +33,37 @@ namespace Logic
                 var menu = (from s in c.MainMenu.Include("MenuChapter")
                             select new Show_Menu
                             {
-                                Name=s.NameOfDish,
-                                Type=s.MenuChapter.Category,
-                                Price=s.Price,
-                                YesNo=s.Availability
+                                Dish = s.NameOfDish,
+                                Category = s.MenuChapter.Category,
+                                Price = s.Price,
+                                Availability = s.Availability
                             }
                             ).ToList();
                 return menu;
 
             }
         }
+        public IEnumerable<Show_Menu_Available> ReqForAvailable()
+        {
+            using (var c = new Context())
+            {
+                var result = (from s in c.MainMenu.Include("MenuChapter")
+                              where s.Availability == "Da"
+
+                              select new Show_Menu_Available
+                              {
+                                  Dish = s.NameOfDish,
+                                  Price = s.Price,
+                                  Category=s.MenuChapter.Category
+                                  
+                              }
+                              ).ToList();
+                return result;
+
+            }
+        }
+
 
     }
-    public class Show_Menu
-    {
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public int Price { get; set; }
-        public string YesNo { get; set; }
-
-    }
+  
 }

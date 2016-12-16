@@ -22,6 +22,7 @@ namespace Interface
     /// </summary>
     public partial class MainWindow : Window
     {
+        Queries queries = new Queries();
         public MainWindow()
         {
             InitializeComponent();
@@ -46,15 +47,41 @@ namespace Interface
 
         private void buttonMenu_Click(object sender, RoutedEventArgs e)
         {
-            
-            Queries queries = new Queries();
            
                     var resMenu = queries.ShowMenu();
                     dataGrid.ItemsSource = resMenu;
-                    
-
            }
+
+        private void buttonAvailable_Click(object sender, RoutedEventArgs e)
+        {
+            var resAvailable = queries.ReqForAvailable();
+            dataGrid.ItemsSource = resAvailable;
         }
+
+        private void buttonFirstCourse_Click(object sender, RoutedEventArgs e)
+        {
+            var resFirstCourse = queries.ReqForASpecifiedCategory("Pervoe bljudo");
+            dataGrid.ItemsSource = resFirstCourse;
+        }
+
+        private void buttonSecondCourse_Click(object sender, RoutedEventArgs e)
+        {
+            var resSecondCourse = queries.ReqForASpecifiedCategory("Vtoroe bljudo");
+            dataGrid.ItemsSource = resSecondCourse;
+        }
+
+        private void buttonDrinks_Click(object sender, RoutedEventArgs e)
+        {
+            var resDrinks = queries.ReqForASpecifiedCategory("Napitok");
+            dataGrid.ItemsSource = resDrinks;
+        }
+
+        private void buttonDeserts_Click(object sender, RoutedEventArgs e)
+        {
+            var resDeserts = queries.ReqForASpecifiedCategory("Desert");
+            dataGrid.ItemsSource = resDeserts;
+        }
+    }
     }
 
 
