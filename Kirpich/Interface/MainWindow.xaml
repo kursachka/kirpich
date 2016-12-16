@@ -3,17 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="550" Width="800" Loaded="Window_Loaded">
     <Grid RenderTransformOrigin="0.502,0.454">
-        <DataGrid HorizontalAlignment="Left" Height="349" Margin="10,149,0,0" VerticalAlignment="Top" Width="762"/>
-        <ComboBox x:Name="Меню" HorizontalAlignment="Left" Height="28" Margin="10,34,0,0" VerticalAlignment="Top" Width="212" Text="Меню">
-            <Button Content="Меню" Width="202"/>
-            <Button Content="Показать блюда в наличии" Width="202"/>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="349" Margin="10,149,0,0" VerticalAlignment="Top" Width="762"/>
+        <ComboBox x:Name="comboBox_Filter" HorizontalAlignment="Left" Height="28" Margin="10,34,0,0" VerticalAlignment="Top" Width="212" Text="Меню" SelectionChanged="combo_SelectionChanged">
+            <Button Name="buttonMenu" Content="Меню" Width="202" Click="buttonMenu_Click"/>
+            <Button Content="показать блюда в наличии" Width="202"/>
             <Button Content="Показать &quot;Первые блюда&quot;" Width="202"/>
             <Button Content="Показать &quot;Вторые блюда&quot;" Width="202"/>
             <Button Content="Показать &quot;Напитки&quot;" Width="202"/>
             <Button Content="Показать &quot;Десерты&quot;" Width="202"/>
             <Button Content="&quot;Комплексный обед&quot;" Width="202"/>
         </ComboBox>
-        <TextBox HorizontalAlignment="Left" Height="28" Margin="551,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True"/>
+        <TextBox HorizontalAlignment="Left" Height="28" Margin="551,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True" TextChanged="TextBox_TextChanged"/>
         <Label Content="Итог :" HorizontalAlignment="Left" Height="28" Margin="464,34,0,0" VerticalAlignment="Top" Width="57"/>
         <Button Content="VK" HorizontalAlignment="Left" Height="27" Margin="10,85,0,0" VerticalAlignment="Top" Width="212"/>
 

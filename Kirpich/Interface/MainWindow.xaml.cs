@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,5 +30,31 @@ namespace Interface
         {
 
         }
+
+        private void combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+                
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+       
+
+        private void buttonMenu_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Queries queries = new Queries();
+           
+                    var resMenu = queries.ShowMenu();
+                    dataGrid.ItemsSource = resMenu;
+                    
+
+           }
+        }
     }
-}
+
+
