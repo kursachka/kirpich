@@ -1,0 +1,364 @@
+﻿
+{ 
+"MainMenu": [
+    {
+      "nameofDish": "Borshh",
+      "menuChapterId": 1,
+      "price": 55,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Soljanka mjasnaja",
+      "menuChapterId": 1,
+      "price": 55,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Sup krest'janskij s risom",
+      "menuChapterId": 1,
+      "price": 55,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Sup-pjure ovoshhnoj s sel'dereem",
+      "menuChapterId": 1,
+      "price": 55,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Plov iz kuricy",
+      "menuChapterId": 2,
+      "price": 85,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Svinina zapechennaja pod gribnym zhul'enom",
+      "menuChapterId": 2,
+      "price": 110,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Indejka Brizol'",
+      "menuChapterId": 2,
+      "price": 115,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Harcho",
+      "menuChapterId": 2,
+      "price": 105,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Svinina tushenaja v souse lecho",
+      "menuChapterId": 2,
+      "price": 105,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kurinaja golen' zapechennaja",
+      "menuChapterId": 2,
+      "price": 70,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kurinye karmashki s ananasom",
+      "menuChapterId": 2,
+      "price": 110,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kotleta rybnaja na paru",
+      "menuChapterId": 2,
+      "price": 85,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Sosiski otvarnye",
+      "menuChapterId": 2,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kabachki po-moldavski",
+      "menuChapterId": 2,
+      "price": 85,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Pasta s kuricej v souse",
+      "menuChapterId": 2,
+      "price": 85,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kotleta Poltavskaja",
+      "menuChapterId": 2,
+      "price": 85,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kotleta po-kievski",
+      "menuChapterId": 2,
+      "price": 90,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Shnicel'",
+      "menuChapterId": 2,
+      "price": 110,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Kapusta tushenaja s mjasom",
+      "menuChapterId": 2,
+      "price": 85,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Treska po-russki s kartofelem",
+      "menuChapterId": 2,
+      "price": 90,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kurinaja otbivnaja s syrom ",
+      "menuChapterId": 2,
+      "price": 110,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Medal'ony s baklazhanami",
+      "menuChapterId": 2,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kurinaja otbivnaja",
+      "menuChapterId": 2,
+      "price": 105,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Kurinye grudki otvarnye",
+      "menuChapterId": 3,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Omlet ",
+      "menuChapterId": 3,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kartofel' pjure",
+      "menuChapterId": 4,
+      "price": 45,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Ris otvarnoj",
+      "menuChapterId": 4,
+      "price": 35,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Grechka otvarnaja",
+      "menuChapterId": 4,
+      "price": 35,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Makarony",
+      "menuChapterId": 4,
+      "price": 40,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Ovoshhnoe assorti",
+      "menuChapterId": 4,
+      "price": 75,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Zapechennyj kartofel'",
+      "menuChapterId": 4,
+      "price": 50,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Salat ",
+      "menuChapterId": 5,
+      "price": 80,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Salat svekol'nyj so smetanoj",
+      "menuChapterId": 5,
+      "price": 50,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Salat ",
+      "menuChapterId": 5,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Salat ",
+      "menuChapterId": 5,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Vinegret s sel'd'ju",
+      "menuChapterId": 5,
+      "price": 50,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Salat ",
+      "menuChapterId": 5,
+      "price": 45,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Salat ",
+      "menuChapterId": 5,
+      "price": 80,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Hachapuri s syrom",
+      "menuChapterId": 6,
+      "price": 55,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Slojka s dzhemom",
+      "menuChapterId": 6,
+      "price": 35,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Pirozhok s jablokom",
+      "menuChapterId": 6,
+      "price": 35,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Pirozhok s mjasom",
+      "menuChapterId": 6,
+      "price": 45,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Pirozhok s kapustoj",
+      "menuChapterId": 6,
+      "price": 35,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Pirozhok s kartoshkoj i gribami",
+      "menuChapterId": 6,
+      "price": 40,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Picca s vetchinoj i ananasom",
+      "menuChapterId": 6,
+      "price": 55,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Samsa s kuricej",
+      "menuChapterId": 6,
+      "price": 50,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Ulitka s koricej",
+      "menuChapterId": 6,
+      "price": 35,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Blin s tvorogom",
+      "menuChapterId": 6,
+      "price": 40,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Olad'i",
+      "menuChapterId": 6,
+      "price": 30,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Shokoladnyj maffin",
+      "menuChapterId": 7,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Ponchik",
+      "menuChapterId": 7,
+      "price": 60,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Pirozhnoe ",
+      "menuChapterId": 7,
+      "price": 75,
+      "availability": "net"
+    },
+    {
+      "nameofDish": "Chaj ",
+      "menuChapterId": 8,
+      "price": 15,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Kofe",
+      "menuChapterId": 8,
+      "price": 15,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Apel'sinovyj sok",
+      "menuChapterId": 8,
+      "price": 25,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Tomatnyj sok",
+      "menuChapterId": 8,
+      "price": 25,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Mul'tifruktovyj sok",
+      "menuChapterId": 8,
+      "price": 25,
+      "availability": "da"
+    },
+    {
+      "nameofDish": "Persikovyj sok",
+      "menuChapterId": 8,
+      "price": 25,
+      "availability": "da"
+    }
+  ]
+,
+
+
+"MenuChapters":[{"id":1,"menuChapter":"Pervoe bljudo"},
+{"id":2,"menuChapter":"Vtoroe bljudo"},
+{"id":3,"menuChapter":"Dieticheskoe bljudo"},
+{"id":4,"menuChapter":"Garnir"},
+{"id":5,"menuChapter":"Salat"},
+{"id":6,"menuChapter":"Vypechka"},
+{"id":7,"menuChapter":"Desert"},
+{"id":8,"menuChapter":"Napitok"}]
+}

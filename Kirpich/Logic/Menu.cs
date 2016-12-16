@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,22 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    class Menu
+   public class Menu
     {
-        #region Columns
         public int Id { get; set; }
+
+        [JsonProperty("nameofDish")]
         public string NameOfDish { get; set; }
-        public MenuChapter MenuChapter { get; set; }
-        public string Price { get; set; }
+
+        [JsonProperty("price")]
+        public int Price { get; set; }
+
+        [JsonProperty("availability")]
         public string Availability { get; set; }
-        #endregion
+
+        [JsonProperty("menuChapterId")]
+        public int MenuChapterId { get; set; }
+
+        public MenuChapter MenuChapter { get; set; }
     }
 }
