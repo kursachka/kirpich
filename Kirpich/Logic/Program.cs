@@ -12,7 +12,13 @@ namespace Logic
     class Program
     {
         static void Main(string[] args)
-        {
+        { Queries que = new Queries();
+            foreach (var item in que.ReqForASpecifiedCategory("Desert"))
+            {
+                Console.WriteLine(item.NameOfDish + " " + item.Price);
+            }
+            
+            Console.ReadKey();
         }
     }
 }
