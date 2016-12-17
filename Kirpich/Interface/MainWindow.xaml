@@ -6,6 +6,12 @@
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="349" Margin="10,149,0,0" VerticalAlignment="Top" Width="762" CurrentCellChanged="CurrentCellChanged" />
         <ComboBox x:Name="comboBox_Filter" HorizontalAlignment="Left" Height="28" Margin="10,34,0,0" VerticalAlignment="Top" Width="212" Text="Меню">
             <Button Name="buttonMenu" Content="Меню" Width="202" Click="buttonMenu_Click"/>
+            <Button Name="buttonAvailable" Content="показать блюда в наличии" Width="202" Click="buttonAvailable_Click"/>
+            <Button Name="buttonFirstCourse" Content="Показать &quot;Первые блюда&quot;" Width="202" Click="buttonFirstCourse_Click"/>
+            <Button Name="buttonSecondCourse" Content="Показать &quot;Вторые блюда&quot;" Width="202" Click="buttonSecondCourse_Click"/>
+            <Button Name="buttonDrinks" Content="Показать &quot;Напитки&quot;" Width="202" Click="buttonDrinks_Click"/>
+            <Button Name="buttonDeserts" Content="Показать &quot;Десерты&quot;" Width="202" Click="buttonDeserts_Click"/>
+            <Button Content="&quot;Комплексный обед&quot;" Width="202"/>
             <Button Content="Показать блюда в наличии" Width="202"/>
             <Button Content="Показать &quot;Первые блюда&quot;" Width="202"/>
             <Button Content="Показать &quot;Вторые блюда&quot;" Width="202"/>
