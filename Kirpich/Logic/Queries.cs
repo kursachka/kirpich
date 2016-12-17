@@ -38,6 +38,28 @@ namespace Logic
             }
         }
 
+        public IEnumerable<Complex_Diner> ComplexDinner()
+        {
+            using (var c = new Context())
+            {
+                var menu = (from s in c.MainMenu.Include("MenuChapter")
+                            where (s.NameOfDish == "Sup krest'janskij s risom" )  |
+                                  (s.NameOfDish == "Sosiski otvarnye") | 
+                                  (s.NameOfDish == "Tomatnyj sok")
+                            select new Complex_Diner
+                            {
+                                Name = s.NameOfDish,
+                                Type = s.MenuChapter.Category,
+                                //Price = s.Price,
+                                //YesNo = s.Availability
+                            }
+                            ).ToList();
+                return menu;
+
+            }
+        }
+
+
     }
     public class Show_Menu
     {
@@ -45,6 +67,14 @@ namespace Logic
         public string Type { get; set; }
         public int Price { get; set; }
         public string YesNo { get; set; }
-
+        public bool Check { get; set; }
     }
+    public class Complex_Diner
+    {
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public bool Check { get; set; }
+    }
+
+
 }

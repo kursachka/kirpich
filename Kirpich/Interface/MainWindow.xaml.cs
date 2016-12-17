@@ -31,17 +31,6 @@ namespace Interface
 
         }
 
-        private void combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-                
-        }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
        
 
         private void buttonMenu_Click(object sender, RoutedEventArgs e)
@@ -51,9 +40,45 @@ namespace Interface
            
                     var resMenu = queries.ShowMenu();
                     dataGrid.ItemsSource = resMenu;
-                    
-
+                    dataGrid.Columns[0].IsReadOnly = true;
+                    dataGrid.Columns[1].IsReadOnly = true;
+                    dataGrid.Columns[2].IsReadOnly = true;
+                    dataGrid.Columns[3].IsReadOnly = true;
+                    tbCena.Text = "";
            }
+
+
+
+        private void buttonComlex_Click(object sender, RoutedEventArgs e)
+        {
+            Queries queries = new Queries();
+
+            var resMenu = queries.ComplexDinner();
+            dataGrid.ItemsSource = resMenu;
+
+            dataGrid.Columns[0].IsReadOnly = true;
+            dataGrid.Columns[1].IsReadOnly = true;
+            //dataGrid.Columns[2].IsReadOnly = true;
+            //dataGrid.Columns[3].IsReadOnly = true;
+
+            tbCena.Text = "120";
+        }
+
+        private void CurrentCellChanged(object sender, EventArgs e)
+        {
+            var resMenu = dataGrid.ItemsSource;
+
+            int sum = 0;
+            foreach (Show_Menu shm in resMenu)
+            {
+                if (shm.Check ) { sum = sum + shm.Price; }
+            }
+            tbCena.Text = sum.ToString();
+        }
+
+
+
+
         }
     }
 
