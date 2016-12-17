@@ -26,12 +26,12 @@ namespace Logic
 
             }
         }
-        public  IEnumerable<Show_Menu> ShowMenu()
+        public  IEnumerable<Show_Menus> ShowMenu()
         {
             using (var c=new Context())
             {
                 var menu = (from s in c.MainMenu.Include("MenuChapter")
-                            select new Show_Menu
+                            select new Show_Menus
                             {
                                 Dish = s.NameOfDish,
                                 Category = s.MenuChapter.Category,
@@ -49,14 +49,23 @@ namespace Logic
             {
                 var result = (from s in c.MainMenu.Include("MenuChapter")
                               where s.Availability == "Da"
+                              select new Show_Menu_Available
+                              {
+                                  Dish = s.NameOfDish,
+                                  Price = s.Price,
+                                  Category=s.MenuChapter.Category
+                                  }).ToList();
+                return result;
+        }
+        }
 
         public IEnumerable<Complex_Diner> ComplexDinner()
         {
             using (var c = new Context())
             {
                 var menu = (from s in c.MainMenu.Include("MenuChapter")
-                            where (s.NameOfDish == "Sup krest'janskij s risom" )  |
-                                  (s.NameOfDish == "Sosiski otvarnye") | 
+                            where (s.NameOfDish == "Sup krest'janskij s risom") |
+                                  (s.NameOfDish == "Sosiski otvarnye") |
                                   (s.NameOfDish == "Tomatnyj sok")
                             select new Complex_Diner
                             {
@@ -67,24 +76,16 @@ namespace Logic
                             }
                             ).ToList();
                 return menu;
-
-                              select new Show_Menu_Available
-                              {
-                                  Dish = s.NameOfDish,
-                                  Price = s.Price,
-                                  Category=s.MenuChapter.Category
-                                  
-    }
+            }
         }
-
-
     }
-    public class Show_Menu
+
+    public class Show_Menus
     {
-        public string Name { get; set; }
-        public string Type { get; set; }
+        public string Dish { get; set; }
+        public string Category { get; set; }
         public int Price { get; set; }
-        public string YesNo { get; set; }
+        public string Availability { get; set; }
         public bool Check { get; set; }
     }
     public class Complex_Diner
@@ -97,4 +98,4 @@ namespace Logic
 
     }
   
-}
+

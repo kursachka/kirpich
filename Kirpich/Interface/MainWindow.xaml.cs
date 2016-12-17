@@ -70,16 +70,14 @@ namespace Interface
             var resMenu = dataGrid.ItemsSource;
        
             int sum = 0;
-            foreach (Show_Menu shm in resMenu)
+
+            foreach (Show_Menus shm in resMenu)
         {
-                if (shm.Check ) { sum = sum + shm.Price; }
-            }
+                if (shm.Check) { sum = sum + shm.Price; }
+        }
             tbCena.Text = sum.ToString();
         }
             
-                    var resMenu = queries.ShowMenu();
-                    dataGrid.ItemsSource = resMenu;
-           }
 
         private void buttonAvailable_Click(object sender, RoutedEventArgs e)
         {

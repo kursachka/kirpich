@@ -11,12 +11,6 @@
             <Button Name="buttonSecondCourse" Content="Показать &quot;Вторые блюда&quot;" Width="202" Click="buttonSecondCourse_Click"/>
             <Button Name="buttonDrinks" Content="Показать &quot;Напитки&quot;" Width="202" Click="buttonDrinks_Click"/>
             <Button Name="buttonDeserts" Content="Показать &quot;Десерты&quot;" Width="202" Click="buttonDeserts_Click"/>
-            <Button Content="&quot;Комплексный обед&quot;" Width="202"/>
-            <Button Content="Показать блюда в наличии" Width="202"/>
-            <Button Content="Показать &quot;Первые блюда&quot;" Width="202"/>
-            <Button Content="Показать &quot;Вторые блюда&quot;" Width="202"/>
-            <Button Content="Показать &quot;Напитки&quot;" Width="202"/>
-            <Button Content="Показать &quot;Десерты&quot;" Width="202"/>
             <Button Content="&quot;Комплексный обед&quot;" Width="202" Click="buttonComlex_Click"/>
         </ComboBox>
         <TextBox Name="tbCena" HorizontalAlignment="Left" Height="28" Margin="551,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True"/>
