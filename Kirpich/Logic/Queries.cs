@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Logic.Show_Menu_All;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,12 +27,12 @@ namespace Logic
 
             }
         }
-        public  IEnumerable<Show_Menus> ShowMenu()
+        public  IEnumerable<Show_Menu> ShowMenu()
         {
             using (var c=new Context())
             {
                 var menu = (from s in c.MainMenu.Include("MenuChapter")
-                            select new Show_Menus
+                            select new Show_Menu
                             {
                                 Dish = s.NameOfDish,
                                 Category = s.MenuChapter.Category,
@@ -69,8 +70,8 @@ namespace Logic
                                   (s.NameOfDish == "Tomatnyj sok")
                             select new Complex_Diner
                             {
-                                Name = s.NameOfDish,
-                                Type = s.MenuChapter.Category,
+                                Dish = s.NameOfDish,
+                                Category = s.MenuChapter.Category,
                                 //Price = s.Price,
                                 //YesNo = s.Availability
                             }
@@ -80,20 +81,7 @@ namespace Logic
         }
     }
 
-    public class Show_Menus
-    {
-        public string Dish { get; set; }
-        public string Category { get; set; }
-        public int Price { get; set; }
-        public string Availability { get; set; }
-        public bool Check { get; set; }
-    }
-    public class Complex_Diner
-    {
-        public string Name { get; set; }
-        public string Type { get; set; }
-        public bool Check { get; set; }
-    }
+  
 
 
     }

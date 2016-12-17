@@ -14,14 +14,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data.OleDb;
+using Logic.Show_Menu_All;
 
 namespace Interface
 {
+  
+    
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+       
         Queries queries = new Queries();
         public MainWindow()
         {
@@ -36,8 +40,6 @@ namespace Interface
 
         private void buttonMenu_Click(object sender, RoutedEventArgs e)
         {
-            
-            Queries queries = new Queries();
                 
                     var resMenu = queries.ShowMenu();
                     dataGrid.ItemsSource = resMenu;
@@ -51,11 +53,10 @@ namespace Interface
 
 
         private void buttonComlex_Click(object sender, RoutedEventArgs e)
-        {
-            Queries queries = new Queries();
+        { 
 
-            var resMenu = queries.ComplexDinner();
-            dataGrid.ItemsSource = resMenu;
+            var resComplex = queries.ComplexDinner();
+            dataGrid.ItemsSource = resComplex;
 
             dataGrid.Columns[0].IsReadOnly = true;
             dataGrid.Columns[1].IsReadOnly = true;
@@ -68,14 +69,18 @@ namespace Interface
         private void CurrentCellChanged(object sender, EventArgs e)
         {
             var resMenu = dataGrid.ItemsSource;
-       
+
             int sum = 0;
 
-            foreach (Show_Menus shm in resMenu)
-        {
-                if (shm.Check) { sum = sum + shm.Price; }
-        }
-            tbCena.Text = sum.ToString();
+
+            foreach (Show_Menu_Available item in resMenu)
+            {
+                if (item.Check == true)
+                { sum = sum + item.Price; }
+                tbCena.Text = sum.ToString();
+            }
+
+
         }
             
 
@@ -83,6 +88,8 @@ namespace Interface
         {
             var resAvailable = queries.ReqForAvailable();
             dataGrid.ItemsSource = resAvailable;
+            
+            
         }
                     
         private void buttonFirstCourse_Click(object sender, RoutedEventArgs e)

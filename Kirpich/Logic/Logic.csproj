@@ -69,7 +69,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries.cs" />
     <Compile Include="Repository.cs" />
-    <Compile Include="Show_Menu.cs" />
+    <Compile Include="Show_Menu_All\Show_Menu.cs" />
+    <Compile Include="Show_Menu_All\Complex_Diner.cs" />
+    <Compile Include="Show_Menu_All\Show_Menu_Available.cs" />
+    <Compile Include="Show_Menu_All\Show_Menu_Category.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

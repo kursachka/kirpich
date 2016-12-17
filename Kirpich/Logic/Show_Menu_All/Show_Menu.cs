@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Logic
+namespace Logic.Show_Menu_All
 {
     public class Show_Menu
     {
@@ -12,18 +12,9 @@ namespace Logic
         public string Category { get; set; }
         public int Price { get; set; }
         public string Availability { get; set; }
+        public bool Check { get; set; }
 
     }
-   public  class Show_Menu_Category
-    {
-        public string Dish { get; set; }
-        public int Price { get; set; }
-        
-    }
-    public class Show_Menu_Available
-    {
-        public string Dish { get; set; }
-        public string Category { get; set; }
-        public int Price { get; set; }
-    }
+
+    
 }
