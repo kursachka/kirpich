@@ -15,7 +15,6 @@
         </ComboBox>
         <TextBox Name="tbCena" HorizontalAlignment="Left" Height="28" Margin="551,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True"/>
         <Label Content="Итог :" HorizontalAlignment="Left" Height="28" Margin="464,34,0,0" VerticalAlignment="Top" Width="57"/>
-        <Button Content="VK" HorizontalAlignment="Left" Height="27" Margin="10,85,0,0" VerticalAlignment="Top" Width="212" />
 
     </Grid>
 </Window>
