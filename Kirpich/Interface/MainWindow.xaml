@@ -1,12 +1,12 @@
 ﻿<Window x:Class="Interface.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="550" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="550" Width="800" >
     <Grid RenderTransformOrigin="0.502,0.454">
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="349" Margin="10,149,0,0" VerticalAlignment="Top" Width="762" CurrentCellChanged="CurrentCellChanged" />
         <ComboBox x:Name="comboBox_Filter" HorizontalAlignment="Left" Height="28" Margin="10,34,0,0" VerticalAlignment="Top" Width="212" Text="Меню">
             <Button Name="buttonMenu" Content="Меню" Width="202" Click="buttonMenu_Click"/>
-            <Button Name="buttonAvailable" Content="показать блюда в наличии" Width="202" Click="buttonAvailable_Click"/>
+            <Button Name="buttonAvailable" Content="Показать блюда в наличии" Width="202" Click="buttonAvailable_Click"/>
             <Button Name="buttonFirstCourse" Content="Показать &quot;Первые блюда&quot;" Width="202" Click="buttonFirstCourse_Click"/>
             <Button Name="buttonSecondCourse" Content="Показать &quot;Вторые блюда&quot;" Width="202" Click="buttonSecondCourse_Click"/>
             <Button Name="buttonDrinks" Content="Показать &quot;Напитки&quot;" Width="202" Click="buttonDrinks_Click"/>
@@ -15,7 +15,7 @@
         </ComboBox>
         <TextBox Name="tbCena" HorizontalAlignment="Left" Height="28" Margin="551,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True"/>
         <Label Content="Итог :" HorizontalAlignment="Left" Height="28" Margin="464,34,0,0" VerticalAlignment="Top" Width="57"/>
-        <Button Content="VK" HorizontalAlignment="Left" Height="27" Margin="10,85,0,0" VerticalAlignment="Top" Width="212"/>
+        <Button Content="VK" HorizontalAlignment="Left" Height="27" Margin="10,85,0,0" VerticalAlignment="Top" Width="212" />
 
     </Grid>
 </Window>
