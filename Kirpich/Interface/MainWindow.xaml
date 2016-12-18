@@ -1,10 +1,20 @@
 ﻿<Window x:Class="Interface.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="550" Width="800" >
+        Title="The menu of &quot;Kirpich&quot;" Height="550" Width="800" Loaded="Window_Loaded" Icon="icon.jpg">
     <Grid RenderTransformOrigin="0.502,0.454">
-        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="349" Margin="10,149,0,0" VerticalAlignment="Top" Width="762" CurrentCellChanged="CurrentCellChanged" />
-        <ComboBox x:Name="comboBox_Filter" HorizontalAlignment="Left" Height="28" Margin="10,34,0,0" VerticalAlignment="Top" Width="212" Text="Меню">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="703*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                <GradientStop Color="#FFDEC6AE"/>
+                <GradientStop Color="#FF091428" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Height="349" Margin="10,149,0,0" VerticalAlignment="Top" Width="762" CurrentCellChanged="CurrentCellChanged" Grid.ColumnSpan="2" />
+        <ComboBox x:Name="comboBox_Filter" HorizontalAlignment="Left" Height="28" Margin="10,34,0,0" VerticalAlignment="Top" Width="212" Text="Меню" Grid.ColumnSpan="2">
             <Button Name="buttonMenu" Content="Меню" Width="202" Click="buttonMenu_Click"/>
             <Button Name="buttonAvailable" Content="Показать блюда в наличии" Width="202" Click="buttonAvailable_Click"/>
             <Button Name="buttonFirstCourse" Content="Показать &quot;Первые блюда&quot;" Width="202" Click="buttonFirstCourse_Click"/>
@@ -13,8 +23,9 @@
             <Button Name="buttonDeserts" Content="Показать &quot;Десерты&quot;" Width="202" Click="buttonDeserts_Click"/>
             <Button Content="&quot;Комплексный обед&quot;" Width="202" Click="buttonComlex_Click"/>
         </ComboBox>
-        <TextBox Name="tbCena" HorizontalAlignment="Left" Height="28" Margin="551,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True"/>
-        <Label Content="Итог :" HorizontalAlignment="Left" Height="28" Margin="464,34,0,0" VerticalAlignment="Top" Width="57"/>
+        <TextBox Name="tbCena" HorizontalAlignment="Left" Height="28" Margin="460.303,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" IsReadOnly="True" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Grid.Column="1"/>
+        <Label Content="Итог :" HorizontalAlignment="Left" Height="28" Margin="373.303,34,0,0" VerticalAlignment="Top" Width="57" Grid.Column="1"/>
+        <Button Content="VK" HorizontalAlignment="Left" Height="27" Margin="10,85,0,0" VerticalAlignment="Top" Width="212" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
