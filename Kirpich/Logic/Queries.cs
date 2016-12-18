@@ -72,8 +72,6 @@ namespace Logic
                             {
                                 Dish = s.NameOfDish,
                                 Category = s.MenuChapter.Category,
-                                //Price = s.Price,
-                                //YesNo = s.Availability
                             }
                             ).ToList();
                 return menu;

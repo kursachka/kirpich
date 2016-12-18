@@ -41,8 +41,7 @@ namespace Interface
 
             dataGrid.Columns[0].IsReadOnly = true;
             dataGrid.Columns[1].IsReadOnly = true;
-            //dataGrid.Columns[2].IsReadOnly = true;
-            //dataGrid.Columns[3].IsReadOnly = true;
+
 
             tbCena.Text = "120";
         }
@@ -53,7 +52,7 @@ namespace Interface
       
             try
             {
-                foreach (Show_Menu item in resMenu)
+                foreach (Show_Menu_Available item in resMenu)
                 {
                     if (item.Check == true)
                     { sum = sum + item.Price; } 
@@ -73,7 +72,7 @@ namespace Interface
                 }
                 catch
                 {
-                    foreach (Show_Menu_Category item in resMenu)
+                    foreach (Show_Menu_Available item in resMenu)
                     {
                         if (item.Check == true)
                         { sum = sum + item.Price; }
