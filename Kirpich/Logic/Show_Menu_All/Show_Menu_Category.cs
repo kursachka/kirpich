@@ -10,6 +10,7 @@ namespace Logic.Show_Menu_All
     {
         public string Dish { get; set; }
         public int Price { get; set; }
+        public bool Check { get; set; }
 
     }
 }

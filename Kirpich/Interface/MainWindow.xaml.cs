@@ -11,7 +11,7 @@ namespace Interface
     public partial class MainWindow : Window
     {
 
-        int sum = 0;
+        
         Queries queries = new Queries();
        
         public MainWindow()
@@ -51,36 +51,39 @@ namespace Interface
         private void CurrentCellChanged(object sender, EventArgs e)
         {
             var resMenu = dataGrid.ItemsSource;
-      
+            int sum = 0;
             try
             {
                 foreach (Show_Menu_Available item in resMenu)
                 {
+
                     if (item.Check == true)
-                    { sum = sum + item.Price; } 
+                    { sum = sum + item.Price; }
+                    tbCena.Text = sum.ToString();
                 }
-                tbCena.Text = sum.ToString();
+                
             }
             catch
             {
                 try
                 {
-                    foreach (Show_Menu_Available item in resMenu)
+                    foreach (Show_Menu_Category item in resMenu)
                     {
                         if (item.Check == true)
                         { sum = sum + item.Price; }
+                        tbCena.Text = sum.ToString();
                     }
-                    tbCena.Text = sum.ToString();
+                    
                 }
                 catch
                 {
-                    foreach (Show_Menu_Available item in resMenu)
+                    foreach (Show_Menu item in resMenu)
                     {
                         if (item.Check == true)
                         { sum = sum + item.Price; }
-                        
+                        tbCena.Text = sum.ToString();
                     }
-                    tbCena.Text = sum.ToString();
+                    
                 }
             }
         }

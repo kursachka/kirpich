@@ -92,26 +92,21 @@ namespace Logic
             using (var client = new HttpClient())
             {
                 string result = client.GetStringAsync(GetMessage()).Result;
-                var data= JsonConvert.DeserializeObject<ResponseVkMessage>(result);
-                return data.Items.Select(item=> new UserInfo
-                {
-                    Id=item.Id,
-                    
-                })
+               return JsonConvert.DeserializeObject<ResponseVkMessage>(result);
 
 
-                using (var client = new HttpClient())
-                {
-                    string result = await client.GetStringAsync($"https://www.googleapis.com/customsearch/v1?q={query}&cx={_engineId}&key={_appKey}");
-                    var data = JsonConvert.DeserializeObject<Result>(result);
+                //using (var client = new HttpClient())
+                //{
+                //     result = await client.GetStringAsync($"https://www.googleapis.com/customsearch/v1?q={query}&cx={_engineId}&key={_appKey}");
+                //    var data = JsonConvert.DeserializeObject<Result>(result);
 
-                    // Convertion from DTO to Domain Model
-                    return data.Items.Select(item => new SearchResult
-                    {
-                        Title = item.Title,
-                        Description = item.Snippet,
-                        Url = item.Link
-                    }).ToList();
+                //    // Convertion from DTO to Domain Model
+                //    return data.Items.Select(item => new SearchResult
+                //    {
+                //        Title = item.Title,
+                //        Description = item.Snippet,
+                //        Url = item.Link
+                //    }).ToList();
                 }
         }
     }
