@@ -1,6 +1,7 @@
 ﻿using Logic;
 using Logic.Show_Menu_All;
 using System;
+using System.Net.Http;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -12,6 +13,7 @@ namespace Interface
 
         int sum = 0;
         Queries queries = new Queries();
+       
         public MainWindow()
         {
             InitializeComponent();
@@ -57,7 +59,7 @@ namespace Interface
                     if (item.Check == true)
                     { sum = sum + item.Price; } 
                 }
-                
+                tbCena.Text = sum.ToString();
             }
             catch
             {
@@ -67,8 +69,8 @@ namespace Interface
                     {
                         if (item.Check == true)
                         { sum = sum + item.Price; }
-                   
                     }
+                    tbCena.Text = sum.ToString();
                 }
                 catch
                 {
@@ -78,6 +80,7 @@ namespace Interface
                         { sum = sum + item.Price; }
                         
                     }
+                    tbCena.Text = sum.ToString();
                 }
             }
         }
@@ -113,6 +116,21 @@ namespace Interface
             dataGrid.ItemsSource = resDeserts;
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            //using (var client = new HttpClient())
+            //{
+            //    string result = client.GetStringAsync(Repository.MessageSendVK("rimskiy_nikita")).Result;
+            //}
+
+        }
+
+        private void ButtonVk_Click(object sender, RoutedEventArgs e)
+        {
+            Repository.GetInfoAboutUser();
+
+        }
     }
 }    
     

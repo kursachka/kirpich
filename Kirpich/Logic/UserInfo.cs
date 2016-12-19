@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,11 @@ namespace Logic
 {
    public class UserInfo
     {
-        public int id { get; set; }
-        public int user_id { get; set; }
-        public string body { get; set; }
+        [JsonProperty("id")]
+        public int Id { get; set; }
+        [JsonProperty("user_id")]
+        public int User_id { get; set; }
+        [JsonProperty("body")]
+        public string Body { get; set; }
     }
 }

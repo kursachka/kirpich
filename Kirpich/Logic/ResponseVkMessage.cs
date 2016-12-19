@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-    class ResponseVkMessage
+    public class ResponseVkMessage
     {
         [JsonProperty("count")]
         public int Count { get; set; }
