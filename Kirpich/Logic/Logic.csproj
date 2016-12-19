@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context.cs" />
+    <Compile Include="Items.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="MenuChapter.cs" />
     <Compile Include="Migrations\201612152150469_kirp.cs" />

@@ -119,20 +119,15 @@ namespace Interface
             dataGrid.ItemsSource = resDeserts;
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-            //using (var client = new HttpClient())
-            //{
-            //    string result = client.GetStringAsync(Repository.MessageSendVK("rimskiy_nikita")).Result;
-            //}
-
-        }
-
         private void ButtonVk_Click(object sender, RoutedEventArgs e)
         {
-            Repository.GetInfoAboutUser();
-
+            foreach (var user in Repository.GetInfoAboutUser().Items)
+            {
+                using (var client = new HttpClient())
+                {
+                    string result = client.GetStringAsync(Repository.MessageSendVK(user.User_id)).Result;
+                }
+            }
         }
     }
 }    

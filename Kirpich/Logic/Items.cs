@@ -7,11 +7,9 @@ using System.Threading.Tasks;
 
 namespace Logic
 {
-   public class UserInfo
+    class Items
     {
-        [JsonProperty("user_id")]
-        public int User_id { get; set; }
-        [JsonProperty("body")]
-        public string Body { get; set; }
+        [JsonProperty("response")]
+        public ResponseVkMessage Response { get; set; }
     }
 }

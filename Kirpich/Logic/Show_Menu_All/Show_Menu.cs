@@ -13,7 +13,6 @@ namespace Logic.Show_Menu_All
         public int Price { get; set; }
         public string Availability { get; set; }
         public bool Check { get; set; }
-
     }
 
     

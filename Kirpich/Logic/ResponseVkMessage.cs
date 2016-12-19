@@ -9,9 +9,9 @@ namespace Logic
 {
     public class ResponseVkMessage
     {
-        [JsonProperty("count")]
-        public int Count { get; set; }
+        //[JsonProperty("count")]
+        //public int Count { get; set; }
         [JsonProperty("items")]
-        public UserInfo Items { get; set; }
+        public List<UserInfo> Items { get; set; }
     }
 }
